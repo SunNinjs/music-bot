@@ -17,7 +17,7 @@ client.on(`ready`, async () => {
     }
   })
   console.log(`Logged into ${client.user.tag}\nBot Invite: https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
-  mongoose.connect(process.env.MONGO_PATH, {
+  mongoose.connect(process.env.MONGOPATH, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
