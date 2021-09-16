@@ -35,8 +35,8 @@ client.player = player;
 
 client.commands = new Collection();
 client.aliases = new Collection();
-fs.readdirSync('C:\\Users\\Sun\\Desktop\\Other\\Coding\\Javascript\\Discord Bots\\music-bot\\commands').forEach(dir => {
-  const commands = fs.readdirSync(`C:\\Users\\Sun\\Desktop\\Other\\Coding\\Javascript\\Discord Bots\\music-bot\\commands/${dir}`).filter(file => file.endsWith(".js"))
+fs.readdirSync('./commands').forEach(dir => {
+  const commands = fs.readdirSync(`./commands/${dir}`).filter(file => file.endsWith(".js"))
   for (let file of commands) {
     let command = require(`./commands/${dir}/${file}`)
     const name = command?.name
